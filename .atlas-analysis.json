@@ -1,0 +1,144 @@
+{
+  "projectType": "saas",
+  "projectName": "Sistema PTA ITSCO",
+  "projectDescription": "Sistema de gestión de Planes de Trabajo Anual para el Instituto Tecnológico Superior de Cajeme",
+  "theme": "linden",
+  "primaryColor": "#1e40af",
+  "lightColor": "#3b82f6",
+  "darkColor": "#1e3a8a",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/architecture",
+              "concepts/data-model",
+              "concepts/user-roles",
+              "concepts/workflow"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "guides/authentication",
+              "guides/managing-personnel",
+              "guides/creating-pta",
+              "guides/indicators-actions",
+              "guides/approval-workflow",
+              "guides/dashboard"
+            ]
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "admin/user-management",
+              "admin/departments-positions",
+              "admin/email-notifications",
+              "admin/password-recovery"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Setup",
+            "pages": [
+              "development/environment",
+              "development/database",
+              "development/configuration"
+            ]
+          },
+          {
+            "group": "Architecture",
+            "pages": [
+              "development/entities",
+              "development/controllers",
+              "development/services",
+              "development/forms"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/production",
+              "deployment/migrations"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Entities",
+            "pages": [
+              "api/entities/user",
+              "api/entities/personal",
+              "api/entities/encabezado",
+              "api/entities/indicadores",
+              "api/entities/acciones"
+            ]
+          },
+          {
+            "group": "Controllers",
+            "pages": [
+              "api/controllers/encabezado",
+              "api/controllers/personal",
+              "api/controllers/departamento",
+              "api/controllers/puesto"
+            ]
+          },
+          {
+            "group": "Services",
+            "pages": [
+              "api/services/user-creator",
+              "api/services/password-generator",
+              "api/services/email-services"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Annual Work Plan (PTA) creation and management",
+    "Personnel management with departments and positions",
+    "Role-based access control and authentication",
+    "Multi-level approval workflow (responsible, supervisor, aval)",
+    "Indicators and actions tracking",
+    "Email notifications for user creation and password recovery",
+    "Admin dashboard for system management",
+    "PostgreSQL database with Doctrine ORM"
+  ],
+  "publicApiSurface": [
+    "EncabezadoController: Create, edit, view, and delete PTAs",
+    "PersonalController: Manage personnel records",
+    "DepartamentoController: Manage departments",
+    "PuestoController: Manage positions",
+    "SecurityController: User authentication",
+    "RecuperarPasswordController: Password recovery workflow",
+    "AdminPersonalApiController: Personnel API endpoints",
+    "Entity\\Encabezado: PTA header with objectives and metadata",
+    "Entity\\Personal: Staff members with department and position",
+    "Entity\\Indicadores: Performance indicators for PTAs",
+    "Entity\\Acciones: Action items within PTAs",
+    "Entity\\Responsables: Approval hierarchy (supervisor and aval)",
+    "Service\\UserCreator: User account creation",
+    "Service\\WelcomeMailer: Welcome email notifications",
+    "Service\\RecuperarPassword: Password recovery logic"
+  ]
+}
